@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 
-nav{
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,10 +16,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 3px 10px  rgb(0, 0, 0, 0.457);
+    box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.457);
+    z-index: 999;
 }
 
-.wrap-img{
+
+.wrap-img {
     width: 30%;
     height: 100%;
     display: flex;
@@ -27,33 +29,147 @@ nav{
     justify-content: center;
 }
 
-.wrap-links{
+
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.wrap-links {
     width: 70%;
     height: 100%;
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
 
-
-
-#s1{
-    background-color: rgb(255, 215, 83);
-    min-height: 100vh;
+.wrap-links a {
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
 }
 
-#s2{
-    background-color: rgb(26, 19, 94);
-    min-height: 100vh;
+.wrap-links a:hover {
+    text-decoration: underline;
+    color: #654fb8;
 }
 
-#s3{
-    background-color: rgb(85, 26, 26);
+#s1 {
     min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-#s4{
-    background-color: rgb(203, 219, 255);
+.left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.right {
+    width: 400px;
+}
+
+.wrap-turminha {
+    border-radius: 999px;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+
+.wrap-turminha img {
+    width: 300px;
+    height: auto;
+    filter: grayscale(1);
+    transition: all 200ms ease-in-out;
+}
+
+
+.wrap-turminha img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.right h1{
+    font-size: 48px;
+    width: 100%;
+}
+.right p{
+    font-size: 18px;
+    width: 100%;
+}
+#s2 {
     min-height: 100vh;
+    padding-top: 80px;
+
+}
+
+#s3 {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+#s4 {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+@media (width <=780px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 15px;
+    }
+
+    .wrap-links a {
+        text-align: center;
+    }
+
+    #s1,
+    #s2,
+    #s3,
+    #s4 {
+        padding: 50px;
+        min-height: 50vh;
+        height: auto;
+    }
+
+    #s1 {
+        flex-direction: column;
+        padding-top: 140px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+        margin-top: 0;
+    }
+
+    .wrap-turminha {
+        width: 250px;
+        height: 250px;
+    }
+
+    .wrap-turminha img {
+        width: 250px;
+        height: 250px;
+    }
 }
